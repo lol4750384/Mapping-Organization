@@ -37,6 +37,12 @@ body {
   width: 100%;
 }
 
+html, body, #root {
+  height: 100%;
+  overflow-y: hidden; /* evita scroll vertical en toda la app */
+  overscroll-behavior-y: none; /* desactiva rebote/overscroll */
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -61,6 +67,42 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.nav-label {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 240ms ease, opacity 180ms linear, transform 200ms ease;
+}
+
+.btn-animate {
+  transition: transform 180ms ease, box-shadow 200ms ease;
+  will-change: transform;
+}
+.btn-animate:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.btn-pop {
+  animation: pop 360ms cubic-bezier(0.2,0,0.2,1) both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(.96); opacity: 0.92; }
+  60% { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -73,3 +115,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Removed forced dark-mode color override so token-based colors apply:
+   previously there were rules like `html.dark * { color: var(--app-text-color) !important }`
+   — those were removed so components use tokens.colorText. */

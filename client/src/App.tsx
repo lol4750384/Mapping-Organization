@@ -1,18 +1,16 @@
 import { Routes, Route } from 'react-router-dom'
-import PageTemplate from './components/PageTemplate'
 import Home from './pages/Home'
-
-const About = () => (
-  <PageTemplate title="Acerca de">
-    <div>Acerca</div>
-  </PageTemplate>
-)
+import Testing from './pages/Testing'
+import AboutDeveloper from './pages/AboutDeveloper'
+import Funding from './pages/Funding'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/testing" element={<Testing />} />
+      <Route path="/about" element={<AboutDeveloper />} />
+      <Route path="/funding" element={<Funding />} />
     </Routes>
   )
 }
