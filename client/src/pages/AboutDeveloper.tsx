@@ -1,34 +1,34 @@
 import React from 'react'
 import PageTemplate from '../components/PageTemplate'
-import { Card, Typography, Button } from 'antd'
-import { useTheme } from '../ThemeProvider'
-import { lightTheme, darkTheme } from '../theme.ts'
-
-const { Title, Paragraph } = Typography
+import { Row, Col } from 'antd'
+import { useDeveloperData } from '../hooks/useDeveloperData'
+import DeveloperHeader from '../components/developer/DeveloperHeader'
+import AboutSection from '../components/developer/AboutSection'
+import SkillsSection from '../components/developer/SkillsSection'
+import PortfolioSection from '../components/developer/PortfolioSection'
+import ReferencesSection from '../components/developer/ReferencesSection'
 
 const AboutDeveloper: React.FC = () => {
-  const { mode } = useTheme()
-  const tokens = (mode === 'light' ? (lightTheme.token as any) : (darkTheme.token as any)) || {}
-  const surface = tokens.colorBgContainer
-  const border = tokens.colorBorder
-  const primary = tokens.colorPrimary
-  const container = tokens.colorBgContainer
+  const { skills, references, portfolio, contact, about } = useDeveloperData()
 
   return (
     <PageTemplate title="Sobre el Developer" subtitle="Conoce al desarrollador detrás del proyecto">
-      <Card style={{ background: surface, border: border ? `1px solid ${border}` : undefined }}>
-        <Title level={3}>Developer</Title>
-        <Paragraph>Perfil del desarrollador, experiencia y enlaces de contacto.</Paragraph>
-        <div style={{ marginTop: 16 }}>
-          <Button
-            className="btn-animate btn-pop"
-            onClick={() => window.open('mailto:dev@example.com')}
-            style={{ background: primary, color: container, border: 'none' }}
-          >
-            Contactar
-          </Button>
-        </div>
-      </Card>
+      <div style={{ padding: '0 16px' }}>
+        <DeveloperHeader name={about.name} title={about.title} contact={contact} />
+
+        <Row gutter={24} style={{ marginBottom: 24 }}>
+          <Col xs={24} md={12}>
+            <AboutSection description={about.description} goal={about.goal} />
+          </Col>
+          <Col xs={24} md={12}>
+            <SkillsSection skills={skills} />
+          </Col>
+        </Row>
+
+        <PortfolioSection portfolio={portfolio} />
+
+        <ReferencesSection references={references} />
+      </div>
     </PageTemplate>
   )
 }
