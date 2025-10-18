@@ -25,30 +25,30 @@ export const useFundingData = () => {
 
   const equipmentNeeded: EquipmentItem[] = [
     {
-      name: 'Servidores Cloud',
+      name: 'Lorem Ipsum Dolor',
       cost: 84000,
-      description: 'Infraestructura en la nube para hosting y escalabilidad',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.',
       icon: null,
       status: 'pending'
     },
     {
-      name: 'Equipo Desarrollo',
+      name: 'Consectetur Adipiscing',
       cost: 56000,
-      description: 'Computadoras y licencias para el equipo de desarrollo',
+      description: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui proin eget tortor.',
       icon: null,
       status: 'partial'
     },
     {
-      name: 'Herramientas Testing',
+      name: 'Mauris Blandit',
       cost: 35000,
-      description: 'Software y herramientas para testing y QA',
+      description: 'Pellentesque in ipsum id orci porta dapibus nulla porttitor accumsan tincidunt donec.',
       icon: null,
       status: 'pending'
     },
     {
-      name: 'Marketing Digital',
+      name: 'Vivamus Magna',
       cost: 49000,
-      description: 'Campañas de marketing y promoción del proyecto',
+      description: 'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus vivamus magna justo.',
       icon: null,
       status: 'funded'
     }

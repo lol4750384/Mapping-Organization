@@ -103,8 +103,8 @@ const Navigation: React.FC = () => {
               <button
                 onClick={() => navigate(path)}
                 style={active ? activeButtonStyle : buttonStyle}
-                onMouseEnter={e => { if (!active) { e.currentTarget.style.background = colorBgContainer; e.currentTarget.style.color = colorPrimary; } }}
-                onMouseLeave={e => { if (!active) { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = colorText; } }}
+                onMouseEnter={e => { if (!active && colorBgContainer) { e.currentTarget.style.background = colorBgContainer; e.currentTarget.style.color = colorPrimary ?? ''; } }}
+                onMouseLeave={e => { if (!active) { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = colorText ?? '#000'; } }}
               >
                 <span style={{ fontSize: 18, width: 24, display: 'flex', justifyContent: 'center' }}>{icon}</span>
                 {!collapsed && <span style={{ fontWeight: active ? 700 : 600 }}>{label}</span>}

@@ -46,32 +46,32 @@ export const useDeveloperData = () => {
     {
       name: 'Laura Gómez',
       position: 'CTO, TechCorp',
-      comment: 'Un profesional excepcional, siempre aporta soluciones innovadoras y trabaja en equipo.',
+      comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       link: 'https://linkedin.com/in/laura-gomez'
     },
     {
       name: 'Carlos Ruiz',
       position: 'Project Manager, EduSoft',
-      comment: 'Miguel demostró liderazgo y compromiso en todos los proyectos que gestionó.',
+      comment: 'Vestibulum ac diam sit amet quam vehicula elementum. Cras ultricies ligula sed magna dictum porta.',
       link: 'https://linkedin.com/in/carlos-ruiz'
     }
   ]
 
   const portfolio: PortfolioItem[] = [
     {
-      title: 'Landing Page Creativa',
+      title: 'Lorem Ipsum Project',
       url: 'https://portfolio.example.com/landing',
-      description: 'Diseño y desarrollo de una landing page interactiva para startups.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
     },
     {
-      title: 'Dashboard Empresarial',
+      title: 'Dolor Sit Amet',
       url: 'https://portfolio.example.com/dashboard',
-      description: 'Panel de control para gestión de datos empresariales con visualizaciones avanzadas.',
+      description: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.',
     },
     {
-      title: 'App de Eventos',
+      title: 'Consectetur Adipiscing',
       url: 'https://portfolio.example.com/events',
-      description: 'Aplicación móvil para gestión y registro de eventos en tiempo real.',
+      description: 'Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt donec sollicitudin.',
     }
   ]
 
@@ -83,9 +83,9 @@ export const useDeveloperData = () => {
 
   const about: DeveloperAbout = {
     name: 'Miguel Mendoza',
-    title: 'Ingeniero de Software especializado en desarrollo web, arquitectura de sistemas y diseño de experiencias digitales.',
-    description: 'Soy una persona curiosa, empática y orientada a resultados. Disfruto resolver problemas complejos, trabajar en equipo y compartir conocimiento. Me apasiona el arte digital, la música y el aprendizaje continuo.',
-    goal: 'Mi objetivo es crear soluciones que impacten positivamente a las personas y empresas.'
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    goal: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.'
   }
 
   return {
