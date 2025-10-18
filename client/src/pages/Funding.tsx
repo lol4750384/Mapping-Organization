@@ -25,7 +25,7 @@ const Funding: React.FC = () => {
   }
 
   return (
-    <PageTemplate title="Financiación" subtitle="Apoya el desarrollo del proyecto UPB-Project">
+    <PageTemplate title="Financiación" subtitle="Apoya el desarrollo de Organización Maping">
       <div style={{ padding: '0 16px' }}>
         <Card
           style={{

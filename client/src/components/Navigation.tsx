@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
           <div style={{ background: colorPrimary, padding: 8, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <RocketOutlined style={{ color: colorBgContainer, fontSize: collapsed ? 20 : 24 }} />
           </div>
-          {!collapsed && <span style={{ color: colorPrimary, fontSize: 20, fontWeight: 800 }}>UPB-Project</span>}
+          {!collapsed && <span style={{ color: colorPrimary, fontSize: 20, fontWeight: 800 }}>Organización Maping</span>}
         </div>
         {!collapsed && (
           <Tooltip title={`Modo ${mode === 'light' ? 'oscuro' : 'claro'}`}>
@@ -144,7 +144,7 @@ const Navigation: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div onClick={() => setDrawerOpen(true)} style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer' }}>
               <RocketOutlined style={{ fontSize: 28 }} />
-              <span style={{ fontWeight: 800, fontSize: 18 }}>UPB-Project</span>
+              <span style={{ fontWeight: 800, fontSize: 18 }}>Organización Maping</span>
             </div>
             <Tooltip title={`Modo ${mode === 'light' ? 'oscuro' : 'claro'}`}>
               <Button
@@ -166,7 +166,7 @@ const Navigation: React.FC = () => {
           title={
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <RocketOutlined style={{ color: colorPrimary, fontSize: 20 }} />
-              <span style={{ color: colorPrimary, fontWeight: 800, fontSize: 18 }}>UPB-Project</span>
+              <span style={{ color: colorPrimary, fontWeight: 800, fontSize: 18 }}>Organización Maping</span>
             </div>
           }
           placement="left"

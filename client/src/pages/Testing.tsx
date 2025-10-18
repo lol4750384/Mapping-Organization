@@ -18,7 +18,7 @@ const Testing: React.FC = () => {
   const { uploadedImages, addUploadedImage } = useTestingData()
 
   return (
-    <PageTemplate title="Testing" subtitle="Galería de imágenes del proyecto">
+    <PageTemplate title="Testing" subtitle="Galería de imágenes de Organización Maping">
       <div style={{ padding: '0 16px' }}>
         <div style={{ marginBottom: 24, display: 'flex', justifyContent: 'flex-end' }}>
           <Button
