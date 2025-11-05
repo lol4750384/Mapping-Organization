@@ -50,9 +50,9 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   })]
 
   return (
-    <div style={{ height: '100vh', display: 'flex', background: pageBg, color: pageText, overflow: 'hidden' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', background: pageBg, color: pageText }}>
       <Navigation />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 24 }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 24, minHeight: 0 }}>
         <div style={{ marginBottom: 14 }}>
            <Breadcrumb separator={<span style={{ margin: '0 10px', color: linkColor ?? pageText, fontSize: 16 }}>›</span>} style={{ fontSize: 16, padding: '8px 0' }}>
              {crumbs.map((c, idx) => (
@@ -77,7 +77,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
            </div>
          )}
  
-         <main style={{ flex: 1, overflow: 'hidden' }}>
+         <main style={{ flex: 1, overflow: 'auto' }}>
            {fullWidth ? (
              <div>{children}</div>
            ) : (
